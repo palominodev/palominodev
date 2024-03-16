@@ -1,0 +1,35 @@
+---
+import SectionLayout from "../layouts/SectionLayout.astro";
+import CardProjects from "../components/CardProjects.astro";
+
+const proyectos = [
+  {
+    title: "E-Bike",
+    tecnologias: ["HTML", "Javascript", "CSS"],
+    url: "https://jeremyispapo.github.io/e-bike/",
+	img: "https://jeremyispapo.github.io/assets/img/bike-proyect.jpg"
+  },
+  {
+	title: "Batata Bit",
+    tecnologias: ["HTML", "Javascript"],
+	url: "https://jeremyispapo.github.io/BitCoins",
+	img: "https://jeremyispapo.github.io/assets/img/batatabit-proyect.png"
+  },
+  {
+	title: "Portafolio",
+	tecnologias: ["HTML", "Javascript", "CSS"],
+	url: "https://jeremyispapo.github.io",
+	img: "https://jeremyispapo.github.io/assets/img/portafolio.png"
+  }
+];
+---
+
+<SectionLayout subtitle="Proyectos">
+  <section class="col-start-1 col-end-9 grid grid-cols-custom gap-[21px]">
+    {
+      proyectos.map(({ title, tecnologias, url, img }) => (
+        <CardProjects title={title} tecnologias={tecnologias} url={url} img={img} />
+      ))
+    }
+  </section>
+</SectionLayout>

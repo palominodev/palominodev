@@ -1,0 +1,25 @@
+---
+import IconArrow from "./icons/IconArrow.astro";
+import IconGithub from "./icons/IconGithub.astro";
+import IconLinkedin from "./icons/IconLinkedin.astro";
+import IconPdf from "./icons/IconPdf.astro";
+
+---
+
+<header class="bg-[url(src/assets/images/hero-background.png)] bg-no-repeat min-h-screen bg-cover flex"> 
+	<section class="flex flex-col items-center h-screen w-full bg-radial justify-center">
+		<h1 class="text-white font-kenia-one text-4xl lg:text-[64px] tracking-normal text-center leading-[90px] mb-10">
+			Scott Palomino 
+			<br>
+			<span class="text-secondary text-6xl lg:text-[96px] uppercase">Front-end</span>
+		</h1>
+		<div class="flex w-[236px] justify-between *:cursor-pointer">
+			<IconPdf />
+			<IconGithub />
+			<IconLinkedin />
+		</div>
+		<span class="absolute bottom-4">
+			<IconArrow />
+		</span>
+	</section>
+</header>

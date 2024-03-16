@@ -1,0 +1,16 @@
+---
+import SectionLayout from "../layouts/SectionLayout.astro";
+import Title from "./Title.astro";
+
+---
+
+<SectionLayout>
+	<figure class="rounded-full self-center overflow-hidden lg:col-start-1 col-start-1 lg:col-end-5 col-end-10 w-48 m-auto lg:m-0 lg:w-auto ">
+		<img src="src/assets/images/foto_perfil.jpg" title="Scott Palomino" alt="Foto de Scott Palomino, mas conocido como Palomino.dev">
+	</figure>
+	<article class="col-start-1 col-end-10 lg:col-start-6 lg:col-end-10 flex flex-col gap-11">
+		<Title Variante='h2' classes="text-center lg:text-left">Sobre mi</Title>
+		<p class="font-poppins text-2xl leading-10 text-center lg:text-left">Apasionado por las tecnologias y amante de las películas. Trabajador, honrado y comprometido.</p>
+		<button class="bg-secondary w-44 p-3 font-kenia-one text-2xl m-auto	lg:m-0">Chatear</button>
+	</article>
+</SectionLayout>

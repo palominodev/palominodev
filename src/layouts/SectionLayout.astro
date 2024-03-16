@@ -1,0 +1,17 @@
+---
+import Title from '../components/Title.astro';
+interface Props {
+	subtitle?: string;
+}
+
+const {subtitle} = Astro.props ;
+---
+
+<section class="lg:w-[943px] grid grid-cols-8 gap-5 my-[75px]">
+	{
+		subtitle 
+		? <Title Variante='h2' classes="my-[75px] col-start-1 text-center lg:text-left">{subtitle}</Title>
+		: null
+	}
+	<slot />
+</section>

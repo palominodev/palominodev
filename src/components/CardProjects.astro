@@ -1,0 +1,29 @@
+---
+import Title from "./Title.astro";
+
+interface Props {
+	title: string
+	tecnologias: string[]
+	url: string
+	img: string
+}
+
+const { title, tecnologias, url, img } = Astro.props
+---
+
+<article class="bg-btn-background rounded-xl overflow-hidden shadow-card">
+	<figure class="h-1/2">
+		<img class="h-full object-cover" src={img} alt="">
+	</figure>
+	<div class="pt-1 pb-7 px-8 flex flex-col gap-8">
+		<Title Variante="h3" classes="text-center">{title}</Title>
+		<div class="flex gap-6 justify-center">
+			{
+				tecnologias.map( tecnologia => (
+					<span class="bg-[#3f3f3f26] text-[#FFFFFF80] rounded px-3">{tecnologia}</span>
+				))
+			}
+		</div>
+		<a class="p-3 flex justify-center self-center rounded bg-secondary " href={url}>Ir al proyecto</a>
+	</div>
+</article>

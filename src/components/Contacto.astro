@@ -1,0 +1,26 @@
+---
+import SectionLayout from "../layouts/SectionLayout.astro"
+import Skill from "../components/Skill.astro"
+import IconCopy from "./icons/IconCopy.astro"
+import IconPdf from "./icons/IconPdf.astro"
+import IconWhatsapp from "./icons/IconWhatsapp.astro"
+---
+
+<SectionLayout subtitle="Contacto">
+	<form class="col-start-1 col-end-5">
+		<input 
+			class="bg-btn-background border-2 border-white p-6 rounded-xl 
+			w-full"
+			placeholder="Email Address"
+			type="email" 
+			name="email" 
+			id="email">
+	</form>
+	<div class="flex cursor-pointer">
+		<Skill title="copiar" Icon={IconCopy}/>
+	</div>
+	<div class="flex col-start-1 gap-5 *:cursor-pointer">
+		<Skill title="Curriculum Vitae" Icon={IconPdf}/>
+		<Skill title="Whatsapp" Icon={IconWhatsapp} />
+	</div>
+</SectionLayout>

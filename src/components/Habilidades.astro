@@ -1,0 +1,108 @@
+---
+import SectionLayout from "../layouts/SectionLayout.astro";
+import IconJS from "../components/icons/IconJS.astro";
+import IconHTML from "../components/icons/IconHTML.astro";
+import IconCSS from "../components/icons/IconCSS.astro";
+import IconReact from "../components/icons/IconReact.astro";
+import IconNext from "../components/icons/IconNext.astro";
+import IconAstro from "../components/icons/IconAstro.astro";
+import IconTailwindcss from "../components/icons/IconTailwindcss.astro";
+import WrapperSkills from "./WrapperSkills.astro";
+import IconExpress from "../components/icons/IconExpress.astro";
+import IconFirebase from "../components/icons/IconFirebase.astro";
+import IconMySQL from "../components/icons/IconMySQL.astro";
+import IconDataBase from "../components/icons/IconDataBase.astro";
+import IconVSC from "../components/icons/IconVSC.astro";
+import IconFigma from "../components/icons/IconFigma.astro";
+import IconPostMan from "../components/icons/IconPostMan.astro";
+import IconTerminal from "../components/icons/IconTerminal.astro";
+
+const habilidades = [
+	{
+		title: "Front-end",
+		skills: [
+			{
+				name: "Javascript",
+				icon: IconJS
+			},
+			{
+				name: "HTML",
+				icon: IconHTML
+			},
+			{
+				name: "CSS",
+				icon: IconCSS
+			},
+			{
+				name: "React.js",
+				icon: IconReact
+			},
+			{
+				name: "Next.js",
+				icon: IconNext
+			},
+			{
+				name: "Astro",
+				icon: IconAstro
+			},
+			{
+				name: "Tailwindcss",
+				icon: IconTailwindcss
+			}
+		]
+	},
+	{
+		title: "Back-end",
+		skills: [
+			{
+				name: "Express",
+				icon: IconExpress
+			},
+			{
+				name: "Firebase",
+				icon: IconFirebase
+			},
+			{
+				name: "MySQL",
+				icon: IconMySQL
+			},
+			{
+				name: "Base de datos Relacional",
+				icon: IconDataBase
+			}
+		]
+	},
+	{
+		title: "Herramientas",
+		skills: [
+			{
+				name: "Visual Studio Code",
+				icon: IconVSC
+			},
+			{
+				name: "Figma",
+				icon: IconFigma
+			},
+			{
+				name: "PostMan",
+				icon: IconPostMan
+			},
+			{
+				name: "Terminal",
+				icon: IconTerminal
+			}
+		]
+	}
+]
+
+---
+
+<SectionLayout subtitle="Habilidades técnicas">
+	<section class="col-span-9">
+		{
+			habilidades.map( area => (
+				<WrapperSkills title={area.title} skills={area.skills} />
+			))
+		}
+	</section>
+</SectionLayout>

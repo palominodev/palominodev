@@ -1,0 +1,18 @@
+---
+interface Props {
+	Variante: 'h1' | 'h2' | 'h3',
+	classes?: string
+}
+
+const {Variante, classes} = Astro.props
+
+const variantes = {
+	h1: 'text-[64px]',
+	h2: 'text-[52px]',
+	h3: 'text-[36px]',
+}
+---
+
+<Variante class=`${variantes[Variante]} ${classes} col-span-9 font-kenia-one`>
+	<slot/>
+</Variante>

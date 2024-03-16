@@ -1,0 +1,27 @@
+---
+import Skill from "./Skill.astro";
+import Title from "./Title.astro";
+
+// interface Skill {
+// 	name: string
+// 	icon: any
+// }
+
+interface Props {
+	title: string;
+	skills: any[]
+}
+
+const { title, skills } = Astro.props
+---
+
+<article class="mb-9">
+	<Title Variante="h3" classes="mb-4">{title}</Title>
+	<div class="flex gap-5 *:cursor-help">
+		{
+			skills.map( skill => (
+				<Skill title={skill.name} Icon={skill.icon} />
+			))
+		}
+	</div>
+</article>
