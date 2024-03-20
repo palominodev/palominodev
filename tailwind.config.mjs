@@ -16,6 +16,7 @@ export default {
 			},
 			backgroundImage: {
 				radial : 'radial-gradient(82.15% 82.15% at 50% 17.85%, rgba(0, 0, 0, 0.00) 0%, #141A29 90.2%)',
+				hero: 'url(/images/hero-background.png)'
 			},
 			fontFamily: {
 				"kenia-one" : '"Keania One"',

@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import myFace from '../assets/images/foto_perfil.jpg'
 import SectionLayout from "../layouts/SectionLayout.astro";
 import Title from "./Title.astro";
 
@@ -6,7 +8,7 @@ import Title from "./Title.astro";
 
 <SectionLayout>
 	<figure class="rounded-full self-center overflow-hidden lg:col-start-1 col-start-1 lg:col-end-5 col-end-10 w-48 m-auto lg:m-0 lg:w-auto ">
-		<img src="src/assets/images/foto_perfil.jpg" title="Scott Palomino" alt="Foto de Scott Palomino, mas conocido como Palomino.dev">
+		<Image src={myFace} alt='Foto de Scott Palomino, más conocido como Palomino.dev' title='Scott Palomino' />
 	</figure>
 	<article class="col-start-1 col-end-10 lg:col-start-6 lg:col-end-10 flex flex-col gap-11">
 		<Title Variante='h2' classes="text-center lg:text-left">Sobre mi</Title>
